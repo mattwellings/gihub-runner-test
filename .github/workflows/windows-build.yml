@@ -16,3 +16,4 @@ jobs:
          Expand-Archive .\nsis-3.11.zip -DestinationPath .\
          ls .\nsis-3.11
          .\nsis-3.11\makensis.exe /VERSION
+         ls 
