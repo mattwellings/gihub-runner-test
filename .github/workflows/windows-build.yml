@@ -10,10 +10,12 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+    - uses: actions/checkout@v3
+    
     - name: Web Request
       run: |
          Invoke-WebRequest https://sf-west-interserver-1.dl.sourceforge.net/project/nsis/NSIS%203/3.11/nsis-3.11.zip?viasf=1 -OutFile .\nsis-3.11.zip
          Expand-Archive .\nsis-3.11.zip -DestinationPath .\
          ls .\nsis-3.11
          .\nsis-3.11\makensis.exe /VERSION
-         ls 
+         ls
