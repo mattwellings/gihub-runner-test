@@ -10,8 +10,6 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - name: Test NSIS
-      run: makensis.exe /VERSION
     - name: Web Request
       run: |
          Invoke-WebRequest https://sf-west-interserver-1.dl.sourceforge.net/project/nsis/NSIS%203/3.11/nsis-3.11.zip?viasf=1 -OutFile .\nsis-3.11.zip
